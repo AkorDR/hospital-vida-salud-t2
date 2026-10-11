@@ -59,7 +59,7 @@ class PacienteEndpointTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(crearRequest("Paciente"))
                 .exchange()
-                .expectStatus().isOk()
+                .expectStatus().isCreated()
                 .expectBody(Paciente.class)
                 .returnResult()
                 .getResponseBody();
